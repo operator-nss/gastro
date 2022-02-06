@@ -1,0 +1,54 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.button {
+   background: #64d370;
+   box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
+   border-radius: 190px;
+   font-family: Comfortaa;
+   font-weight: bold;
+   font-size: rem(26);
+   line-height: 133.8%;
+   text-align: center;
+   white-space: nowrap;
+   display: inline-block;
+   border: 3px solid #64d370;
+   letter-spacing: 0.025em;
+   transition: all 0.3s ease 0s;
+   padding: rem(11) rem(65);
+   color: #f5faff;
+   @media (any-hover: hover) {
+      &:hover {
+         color: #64d370;
+         border: 3px solid #64d370;
+         background: transparent;
+      }
+   }
+}
+
+.rotate {
+   transform: rotate(-30deg);
+}
+//========================================================================================================================================================
+
+@-webkit-keyframes rotate-center {
+   0% {
+     -webkit-transform: rotate(0);
+             transform: rotate(0);
+   }
+   100% {
+     -webkit-transform: rotate(360deg);
+             transform: rotate(360deg);
+   }
+ }
+ @keyframes rotate-center {
+   0% {
+     -webkit-transform: rotate(0);
+             transform: rotate(0);
+   }
+   100% {
+     -webkit-transform: rotate(360deg);
+             transform: rotate(360deg);
+   }
+ }
+
+ //========================================================================================================================================================
