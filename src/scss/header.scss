@@ -75,7 +75,7 @@
 
    &__rows {
       display: flex;
-      width: 100%;
+      // width: 100%;
       justify-content: space-between;
       padding: rem(52) rem(0) rem(20) rem(0);
    }
@@ -97,8 +97,13 @@
       position: absolute;
       top: -47px;
       left: -40px;
+      // top: 0;
+      // left: 0;
+      // transform: translate(-50%, -50%);
       width: 264px;
       height: 264px;
+      @include adaptiveValue("height", 264, 139);
+      @include adaptiveValue("width", 264, 139);
       border-radius: 50%;
       background-color: #f5faff;
       display: flex;
@@ -132,7 +137,7 @@
    // .header__phone
 
    &__phone {
-      flex: 0 0 rem(280);
+      flex: 0 1 rem(280);
       font-weight: bold;
       margin: rem(0) rem(0) rem(0) rem(20);
       display: inline-flex;
@@ -142,7 +147,7 @@
       line-height: math.div(24, 20);
       color: #64d370;
       white-space: nowrap;
-      border: 3px solid #F5FAFF;
+      border: 3px solid #f5faff;
       background: #f5faff;
       box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
       border-radius: 190px;
@@ -153,7 +158,7 @@
          &:hover {
             color: #f5faff;
             background: transparent;
-            border: 3px solid #F5FAFF;
+            border: 3px solid #f5faff;
          }
       }
    }
@@ -170,25 +175,55 @@
    background: #f5faff;
    box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
    border-radius: 190px;
+   @extend %ic;
+   position: relative;
 
+   @media (max-width: $tablet) {
+      min-height: 56px;
+      &::before {
+         content: "\e905";
+         font-size: rem(27);
+         width: 90px;
+         height: 90px;
+         display: flex;
+         border-radius: 50%;
+         color: #64D370;
+         justify-content:center;
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+         align-items: center;
+         background: #f5faff;
+         box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
+      }
+   }
    // .menu__header
 
    &__header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: rem(16) rem(0);
+      padding-top: 16px;
+      padding-bottom: 16px;
+      @include adaptiveValue("padding-left", 233, 150);
+      @include adaptiveValue("padding-right", 40, 20);
+      @media (max-width: $pc) {
+         padding-top: 5px;
+         padding-bottom: 5px;
+      }
    }
 
    // .menu__list
 
    &__list {
-      display: flex;
-      justify-content: space-between;
-      @include adaptiveValue("padding-left", 233, 233);
-      @include adaptiveValue("padding-right", 40, 40);
    }
 
    // .menu__item
 
    &__item {
-      padding: rem(16) rem(5);
+      padding: rem(5) rem(10);
    }
 
    // .menu__link
