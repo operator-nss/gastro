@@ -481,13 +481,13 @@
       border-radius: 50%;
       align-items: center;
       position: relative;
+      transition: all 0.3s ease 0s;
       cursor: pointer;
       span {
          position: absolute;
          right: 0;
          opacity: 1;
          transition: opacity 0.3s ease 0s;
-
          top: 0;
          width: 25px;
          height: 25px;
@@ -504,7 +504,23 @@
       &::before {
          font-size: rem(37);
       }
+      @media (any-hover: hover) {
+         &:hover {
+            // background-color: #64d370;
+            &::before {
+               color: #64d370;
+            }
+         }
+      }
       &._active {
+         @media (any-hover: hover) {
+            &:hover {
+               background: #f35353;
+               &::before {
+                  color: #fff;
+               }
+            }
+         }
          span {
             opacity: 0;
          }

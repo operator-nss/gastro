@@ -77,18 +77,29 @@
       display: flex;
       // width: 100%;
       justify-content: space-between;
-      padding: rem(52) rem(0) rem(20) rem(0);
+      padding: rem(52) rem(0) rem(20) rem(50);
+      @media (max-width: em(1400)) {
+         // padding: rem(52) rem(20) rem(20) rem(20);
+      }
    }
 
    // .header__row
 
    &__row {
       flex: 1 1 auto;
+      min-height: 52px;
+      // display: flex;
+      // align-items: center;
    }
 
    // .header__links
 
    &__links {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex: 1 1 auto;
    }
 
    // .header__logo
@@ -97,11 +108,9 @@
       position: absolute;
       top: -47px;
       left: -40px;
-      // top: 0;
-      // left: 0;
-      // transform: translate(-50%, -50%);
       width: 264px;
       height: 264px;
+      z-index: 5;
       @include adaptiveValue("height", 264, 139);
       @include adaptiveValue("width", 264, 139);
       border-radius: 50%;
@@ -111,6 +120,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @media (max-width: em(1300)) {
+         @include adaptiveValue("left", 0, 40);
+      }
       img {
          transition: transform 0.3s ease 0s;
       }
@@ -138,12 +150,14 @@
 
    &__phone {
       flex: 0 1 rem(280);
+      @include adaptiveValue("flex-shrink", 280, 150, 1920, 991.98, 1);
       font-weight: bold;
       margin: rem(0) rem(0) rem(0) rem(20);
+      @include adaptiveValue("margin-left", 20, 10, 1992, 991.98, 1);
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      font-size: 20px;
+      font-size: 15px;
       line-height: math.div(24, 20);
       color: #64d370;
       white-space: nowrap;
@@ -152,7 +166,7 @@
       box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
       border-radius: 190px;
       transition: all 0.3s ease 0s;
-      padding: rem(13) rem(30);
+      padding: rem(5) rem(10);
 
       @media (any-hover: hover) {
          &:hover {
@@ -177,9 +191,12 @@
    border-radius: 190px;
    @extend %ic;
    position: relative;
+   height: 100%;
+   display: flex;
+   flex: 1 1 auto;
+   width: 100%;
 
    @media (max-width: $tablet) {
-      min-height: 56px;
       &::before {
          content: "\e905";
          font-size: rem(27);
@@ -187,8 +204,8 @@
          height: 90px;
          display: flex;
          border-radius: 50%;
-         color: #64D370;
-         justify-content:center;
+         color: #64d370;
+         justify-content: center;
          position: absolute;
          left: 50%;
          top: 50%;
@@ -201,29 +218,29 @@
    // .menu__header
 
    &__header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding: rem(16) rem(0);
-      padding-top: 16px;
-      padding-bottom: 16px;
-      @include adaptiveValue("padding-left", 233, 150);
       @include adaptiveValue("padding-right", 40, 20);
-      @media (max-width: $pc) {
-         padding-top: 5px;
-         padding-bottom: 5px;
-      }
+      display: flex;
+      width: 100%;
+      flex: 1 1 auto;
    }
 
    // .menu__list
 
    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex: 1 1 auto;
+      height: 100%;
+      width: 100%;
+      flex-wrap: wrap;
+      padding: rem(0) rem(0) rem(0) rem(200);
    }
 
    // .menu__item
 
    &__item {
-      padding: rem(5) rem(10);
+      padding: rem(4) rem(10);
    }
 
    // .menu__link
@@ -232,6 +249,8 @@
       line-height: 133.8%;
       white-space: nowrap;
       color: #020202;
+      font-size: 14px;
+      @include adaptiveValue("font-size", 14, 8);
       transition: color 0.3s ease 0s;
 
       @media (any-hover: hover) {
