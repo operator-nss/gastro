@@ -217,7 +217,6 @@
                position: relative;
                right: 5px;
                @include adaptiveValue("right", 5, 0, 1920, 991.98, 1);
-
                top: 8px;
             }
          }
@@ -233,8 +232,10 @@
 
       @media (any-hover: hover) {
          &:hover {
+            .aside-mainslider__item_1 {
+               margin: rem(0) rem(50) rem(0) rem(-10);
+            }
             div {
-               // padding: rem(0) rem(40) rem(0) rem(20);
                margin: rem(0) rem(50) rem(0) rem(0);
             }
             width: auto;
@@ -259,7 +260,6 @@
       &_1 {
          // padding-left: 12px !important;
          @include adaptiveValue("margin-left", -11, -5, 1920, 991.98, 1);
-
          @include adaptiveValue("font-size", 20, 12, 1920, 991.98, 1);
       }
    }
@@ -749,8 +749,8 @@
       @media (max-width: $tablet) {
          flex: 0 1 33.333%;
       }
-      @media (max-width:$mobile){
-          flex: 0 1 50%;
+      @media (max-width: $mobile) {
+         flex: 0 1 50%;
       }
    }
 
