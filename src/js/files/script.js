@@ -6,19 +6,19 @@ const socialClue = document.querySelector('.social-mainslider__clue');
 buttonMessage.addEventListener('click', () => {
    buttonMessage.classList.toggle('_active');
    chattingSocial.classList.toggle('_active');
-   socialClue.classList.add('_dnone');
 });
 
 socialMainslider.addEventListener('mouseover', () => {
-   if (!socialClue.classList.contains('_dnone')) {
+   if (!socialClue.classList.contains('_hidden')) {
       socialClue.classList.add('_hidden');
    }
-
 });
 
-socialMainslider.addEventListener('mouseout', () => {
-   setInterval(() => {
-      socialClue.classList.remove('_hidden');
-   }, 7000);
 
+window.addEventListener('load', () => {
+   setInterval(() => {
+      if (!socialClue.classList.contains('_hidden')) {
+         socialClue.classList.add('_hidden');
+      }
+   }, 6000);
 });

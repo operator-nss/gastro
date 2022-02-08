@@ -7,14 +7,21 @@
    font-family: Comfortaa;
    font-weight: bold;
    font-size: rem(26);
+   @include adaptiveValue("font-size", 26, 14);
    line-height: 133.8%;
    text-align: center;
    white-space: nowrap;
-   display: inline-block;
+   display: inline-flex;
+   justify-content:center;
+   align-items: center;
    border: 3px solid #64d370;
    letter-spacing: 0.025em;
    transition: all 0.3s ease 0s;
    padding: rem(11) rem(65);
+   @include adaptiveValue("padding-left", 65, 29);
+   @include adaptiveValue("padding-right", 65, 29);
+   @include adaptiveValue("padding-top", 11, 7);
+   @include adaptiveValue("padding-bottom", 11, 7);
    color: #f5faff;
    @media (any-hover: hover) {
       &:hover {
