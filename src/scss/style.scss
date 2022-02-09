@@ -166,5 +166,34 @@ body {
    &__nutrition {
       @include adaptiveValue("padding-top", 50, 25);
       @include adaptiveValue("padding-bottom", 50, 25);
+      position: relative;
+      z-index: 2;
+      @media (min-width: $pc) {
+         &::before {
+            content: "";
+            border: 30px solid rgba(38, 240, 58, 0.1);
+            border-radius: 50%;
+            width: 529px;
+            height: 529px;
+            position: absolute;
+            right: -62px;
+            bottom: -140px;
+            z-index: -1;
+         }
+      }
+   }
+
+   // .page__dishes
+
+   &__dishes {
+      @include adaptiveValue("padding-top", 50, 25);
+      @include adaptiveValue("padding-bottom", 50, 25);
+   }
+
+   // .page__order
+
+   &__order {
+      @include adaptiveValue("padding-top", 50, 25);
+      @include adaptiveValue("padding-bottom", 50, 25);
    }
 }

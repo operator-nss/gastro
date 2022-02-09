@@ -234,6 +234,89 @@
 
          @@include('html/_nutrition.htm',{})
 
+         <section class="page__dishes dishes">
+
+            <h2 class="dishes__title">Фото блюд</h2>
+
+            <div class="dishes__slider swiper">
+               <div class="dishes__wrapper swiper-wrapper">
+
+
+                  <div class="dishes__slide swiper-slide">
+                     <div class="dishes__image-ibg"><img src="@img/dishes/01.jpg" alt=""></div>
+                  </div>
+                  <div class="dishes__slide swiper-slide">
+                     <div class="dishes__image-ibg"><img src="@img/dishes/02.jpg" alt=""></div>
+                  </div>
+                  <div class="dishes__slide swiper-slide">
+                     <div class="dishes__image-ibg"><img src="@img/dishes/03.jpg" alt=""></div>
+                  </div>
+                  <div class="dishes__slide swiper-slide">
+                     <div class="dishes__image-ibg"><img src="@img/dishes/04.jpg" alt=""></div>
+                  </div>
+                  <div class="dishes__slide swiper-slide">
+                     <div class="dishes__image-ibg"><img src="@img/dishes/05.jpg" alt=""></div>
+                  </div>
+
+
+               </div>
+            </div>
+
+         </section>
+
+
+         <section class="page__order order">
+            <div class="order__container">
+
+               <div class="order__issue issue-order">
+                  <div class="issue-order__title">Оформить заказ</div>
+                  <div class="issue-order__title-subtext">Обсудите все детали заказа по телефону
+                     или сами укажите все подробности онлайн</div>
+
+                  <form action="#" class="issue-order__form">
+
+                     <div class="issue-order__item">
+                        <input id="form-name" autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+                           placeholder="Иван" class="input issue-order__input-name">
+                        <label class="issue-order__label-name" for="form-name"><span>Имя</span></label>
+                     </div>
+
+                     <div class="issue-order__item">
+                        <input id="form-phone" autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+                           placeholder="+123456789" class="input issue-order__input-phone">
+                        <label class="issue-order__label-phone" for="form-phone"><span>Номер телефона</span></label>
+                     </div>
+
+
+                     <div class="issue-order-checkbox__checkbox checkbox">
+                        <input id="c_1" data-error="Ошибка" class="checkbox__input issue-order-checkbox__input"
+                           type="checkbox" value="1" name="form[]">
+                        <label for="c_1" class="issue-order-checkbox__label checkbox__label"><span
+                              class="checkbox__text issue-order-checkbox__text">Тест-день! Получить скидку
+                              -30%?</span></label>
+                        <input id="c_2" data-error="Ошибка" class="checkbox__input issue-order-checkbox__input"
+                           type="checkbox" value="2" name="form[]">
+                        <label for="c_2" class="issue-order-checkbox__label checkbox__label"><span
+                              class="checkbox__text issue-order-checkbox__text">Согласен с
+                              <a href="">условиями сотрудничества</a>
+                           </span></label>
+                     </div>
+
+                     <div class="issue-order__buttons">
+                        <button type="submit" class="issue-order__button button button__border">Заказ по
+                           телефону</button>
+                        <div>ИЛИ</div>
+                        <button type="submit" class="issue-order__button button">Онлайн заказ</button>
+                     </div>
+
+                  </form>
+
+               </div>
+
+               <div class="order__questions"></div>
+            </div>
+         </section>
+
 
          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 

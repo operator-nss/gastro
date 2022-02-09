@@ -34,6 +34,7 @@
    // .mainslider__container
 
    &__container {
+      sdf
    }
 
    // .mainslider__slider
@@ -761,5 +762,225 @@
       font-size: 12px;
       line-height: 130.22%;
       @include adaptiveValue("font-size", 12, 8);
+   }
+}
+
+//========================================================================================================================================================
+
+.dishes {
+   background: #f5faff;
+   // .dishes__slider
+
+   // .dishes__title
+
+   &__title {
+      font-family: Comfortaa;
+      font-weight: bold;
+      line-height: math.div(33, 30);
+      font-size: 30px;
+      text-align: center;
+      @include adaptiveValue("margin-bottom", 60, 30);
+   }
+
+   &__slider {
+      &.swiper {
+         overflow: visible;
+      }
+   }
+
+   // .dishes__wrapper
+
+   &__wrapper {
+   }
+
+   // .dishes__slide
+
+   &__slide {
+   }
+
+   // .dishes__image-ibg
+
+   &__image-ibg {
+      padding: rem(0) rem(0) 142% rem(0);
+      @media (any-hover: hover) {
+         &:hover {
+            img {
+               transform: scale(1.05);
+            }
+         }
+      }
+
+      img {
+         filter: drop-shadow(0px 0px 20px rgba(86, 86, 86, 0.5));
+         border-radius: 30px;
+         transition: transform 0.3s ease 0s;
+      }
+   }
+}
+
+//========================================================================================================================================================
+
+.order {
+   // .order__container
+
+   &__container {
+      display: flex;
+      gap: rem(82);
+   }
+
+   // .order__issue
+
+   &__issue {
+      flex: 0 1 35%;
+   }
+
+   // .order__questions
+
+   &__questions {
+      flex: 1 1 auto;
+   }
+}
+.issue-order {
+   // .issue-order__title
+
+   &__title {
+      font-family: Comfortaa;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: math.div(33, 30);
+      text-align: center;
+      &:not(:last-child) {
+         margin-bottom: rem(5);
+      }
+   }
+
+   // .issue-order__title-subtext
+
+   &__title-subtext {
+      font-size: 16px;
+      line-height: 133.8%;
+      text-align: center;
+      letter-spacing: 0.025em;
+      &:not(:last-child) {
+         margin-bottom: rem(30);
+      }
+   }
+
+   // .issue-order__form
+
+   &__form {
+   }
+
+   // .issue-order__item
+
+   &__item {
+      display: flex;
+      flex-direction: column-reverse;
+   }
+
+   // .issue-order__input-name
+
+   &__input-name {
+      margin: rem(0) rem(0) rem(30) rem(0);
+      &._form-focus + .issue-order__label-name {
+         color: #64d370;
+      }
+   }
+
+   // .issue-order__input-phone
+
+   &__input-phone {
+      margin: rem(0) rem(0) rem(30) rem(0);
+      &._form-focus + .issue-order__label-phone {
+         color: #64d370;
+      }
+   }
+
+   // .issue-order__label-name
+
+   &__label-name {
+      font-family: Comfortaa;
+      font-weight: bold;
+      font-size: 18px;
+      display: block;
+      line-height: 133.8%;
+      transition: all 0.3s ease 0s;
+      letter-spacing: 0.025em;
+      margin: rem(0) rem(0) rem(5) rem(0);
+      &._hover {
+         color: #64d370;
+      }
+   }
+
+   // .issue-order__label-phone
+
+   &__label-phone {
+      font-family: Comfortaa;
+      font-weight: bold;
+      font-size: 18px;
+      display: block;
+      transition: all 0.3s ease 0s;
+
+      line-height: 133.8%;
+      letter-spacing: 0.025em;
+      margin: rem(0) rem(0) rem(5) rem(0);
+   }
+
+   // .issue-order__buttons
+
+   &__buttons {
+      text-align: center;
+      div {
+         &:not(:last-child) {
+            margin-bottom: rem(10);
+         }
+      }
+   }
+
+   // .issue-order__button
+
+   &__button {
+      &:not(:last-child) {
+         margin-bottom: rem(10);
+      }
+   }
+}
+
+.issue-order-checkbox {
+   // .issue-order-checkbox__checkbox
+
+   &__checkbox {
+   }
+
+   // .issue-order-checkbox__input
+
+   &__input {
+   }
+
+   // .issue-order-checkbox__label
+
+   &__label {
+      margin: rem(0) rem(0) rem(20) rem(0);
+      &:last-child {
+         margin: rem(0) rem(0) rem(32) rem(0);
+      }
+   }
+
+   // .issue-order-checkbox__text
+
+   &__text {
+      font-family: Comfortaa;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 133.8%;
+      letter-spacing: 0.025em;
+      a {
+         color: #64d370;
+         @media (any-hover: hover) {
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
    }
 }
