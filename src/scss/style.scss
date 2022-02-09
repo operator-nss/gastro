@@ -146,6 +146,7 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "index";
+@import "nutrition";
 
 .page {
    // .page__mainslider
@@ -156,7 +157,14 @@ body {
    // .page__reason
 
    &__reason {
-     @include adaptiveValue("padding-top", 50, 25);
-     @include adaptiveValue("padding-bottom", 50, 25);
+      @include adaptiveValue("padding-top", 50, 25);
+      @include adaptiveValue("padding-bottom", 50, 25);
+   }
+
+   // .page__nutrition
+
+   &__nutrition {
+      @include adaptiveValue("padding-top", 50, 25);
+      @include adaptiveValue("padding-bottom", 50, 25);
    }
 }

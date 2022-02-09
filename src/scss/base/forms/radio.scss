@@ -1,9 +1,197 @@
-.options {
+.nutrition-programm {
    display: flex;
-   @media (max-width:$tablet){
-      flex-direction: column;
+   margin: rem(0) rem(0) rem(50) rem(0);
+   @include adaptiveValue("margin-bottom", 50, 39);
+   width: 100%;
+   justify-content: space-between;
+   @media (max-width: $tablet) {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: rem(20);
    }
    // .options__item
+   &__item {
+      position: relative;
+      cursor: pointer;
+      &:not(:last-child) {
+         margin-bottom: em(5);
+      }
+      @media (max-width: $tablet) {
+         &:not(:last-child) {
+            margin-bottom: rem(0);
+         }
+         flex: 0 1 27%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+   // .options__input
+   &__input {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      position: absolute;
+      &:focus + .nutrition-programm__label:before {
+         box-shadow: 0 0 5px #000;
+      }
+      &:checked + .nutrition-programm__label {
+         span {
+            color: #64d370;
+         }
+      }
+   }
+   // .nutrition-programm__label
+   &__label {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+   }
+   // .options__text
+   &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      white-space: nowrap;
+      font-family: Comfortaa;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 20px;
+      line-height: math.div(20, 18);
+      text-transform: uppercase;
+      color: #000000;
+      @include adaptiveValue("font-size", 18, 12);
+      span {
+         text-transform: lowercase;
+         white-space: nowrap;
+         margin: rem(4) rem(0) rem(0) rem(0);
+         font-size: 14px;
+         @include adaptiveValue("font-size", 14, 10);
+         line-height: math.div(17, 14);
+         color: #000000;
+      }
+   }
+}
+
+//========================================================================================================================================================
+
+.options-timetable-nutrition {
+   display: flex;
+   // .options__item
+   &__item {
+      position: relative;
+      padding: rem(5) rem(5);
+      cursor: pointer;
+      // &:not(:last-child) {
+      // 	margin-bottom: em(5);
+      // }
+   }
+   // .options-timetable-nutrition__input
+   &__input {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      position: absolute;
+      &:focus + .options-timetable-nutrition__label:before {
+         box-shadow: 0 0 5px #000;
+      }
+      &:checked + .options-timetable-nutrition__label {
+         span {
+            color: #64d370;
+            @media (max-width:$tablet){
+               
+            }
+         }
+      }
+      &:checked + .options-timetable-nutrition__label:after {
+         // transform: scale(1);
+      }
+   }
+   // .options-timetable-nutrition__label
+   &__label {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+   }
+   // .options-timetable-nutrition__text
+   &__text {
+   }
+}
+
+//========================================================================================================================================================
+
+// .nutrition-programm {
+// 	display: flex;
+// 	// flex-direction: column;
+// 	// align-items: flex-start;
+// 	// .nutrition-programm__item
+// 	&__item {
+// 		position: relative;
+// 		cursor: pointer;
+// 		&:not(:last-child) {
+// 			margin-bottom: em(5);
+// 		}
+// 	}
+// 	// .nutrition-programm__input
+// 	&__input {
+// 		width: 0;
+// 		height: 0;
+// 		opacity: 0;
+// 		position: absolute;
+// 		&:focus + .nutrition-programm__label:before {
+// 			box-shadow: 0 0 5px #000;
+// 		}
+// 		&:checked + .nutrition-programm__label:before {
+// 		}
+// 		&:checked + .nutrition-programm__label:after {
+// 			transform: scale(1);
+// 		}
+// 	}
+// 	// .nutrition-programm__label
+// 	&__label {
+// 		display: inline-flex;
+// 		align-items: center;
+// 		cursor: pointer;
+// 		gap: 10px;
+// 		&:before {
+// 			content: "";
+// 			align-self: flex-start;
+// 			width: 20px;
+// 			height: 20px;
+// 			flex: 0 0 20px;
+// 			border-radius: 50%;
+// 			border: 1px solid #a7a9ac;
+// 		}
+// 		&:after {
+// 			content: "";
+// 			transition: all 0.3s ease 0s;
+// 			transform: scale(0);
+// 			width: 10px;
+// 			height: 10px;
+// 			border-radius: 50%;
+// 			background-color: #77243a;
+// 			position: absolute;
+// 			left: 5px;
+// 			top: 5px;
+// 		}
+// 	}
+// 	// .nutrition-programm__text
+// 	&__text {
+// 	}
+// }
+
+//========================================================================================================================================================
+
+.options-language {
+   display: flex;
+   @media (max-width: $tablet) {
+      flex-direction: column;
+   }
+   // .options-language__item
    &__item {
       position: relative;
       cursor: pointer;
@@ -13,17 +201,18 @@
       flex: 0 0 rem(35);
       justify-content: center;
       align-items: center;
-      @media (min-width:$tablet){
+      @media (min-width: $tablet) {
          &:not(:last-child) {
             margin-right: rem(20);
          }
       }
-      @media (max-width:$tablet){
-         &:not(:last-child) {margin-bottom: rem(10);}
+      @media (max-width: $tablet) {
+         &:not(:last-child) {
+            margin-bottom: rem(10);
+         }
       }
-
    }
-   // .options__input
+   // .options-language__input
    &__input {
       width: 0;
       height: 0;
@@ -32,7 +221,7 @@
       // &:focus + .options__label:before {
       // 	box-shadow: 0 0 5px #000;
       // }
-      &:checked + .options__label {
+      &:checked + .options-language__label {
          background-color: #64d370;
          color: #f4f9fe;
       }
@@ -42,7 +231,7 @@
       // 	transform: scale(1);
       // }
    }
-   // .options__label
+   // .options-language__label
    &__label {
       // display: inline-flex;
       background-color: #f5faff;
@@ -54,7 +243,7 @@
       gap: 10px;
       border-radius: 50%;
       display: flex;
-      justify-content:center;
+      justify-content: center;
       align-items: center;
       width: 100%;
       height: 100%;
@@ -82,7 +271,7 @@
          top: 5px;
       }
    }
-   // .options__text
+   // .options-language__text
    &__text {
    }
 }

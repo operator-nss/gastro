@@ -1,0 +1,282 @@
+.navigation-nutrition {
+   display: flex;
+   gap: rem(20);
+   &:not(:last-child) {
+      margin-bottom: rem(70);
+      @include adaptiveValue("margin-bottom", 70, 40);
+   }
+   @media (max-width:$tablet){
+      flex-direction: column;
+   }
+
+   // .navigation-nutrition__title
+
+   &__title {
+      flex: 0 1 50%;
+      font-family: Comfortaa;
+      font-weight: bold;
+      font-size: 25px;
+      display: flex;
+      justify-content: center;
+      transition: all 0.3s ease 0s;
+      white-space: nowrap;
+      align-items: center;
+      line-height: math.div(28, 25);
+      box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
+      border-radius: 190px;
+      min-height: 62px;
+      @include adaptiveValue("font-size", 25, 14);
+      @include adaptiveValue("min-height", 62, 36);
+      &._tab-active {
+         background: #64d370;
+         color: #f5faff;
+      }
+   }
+
+   // .navigation-nutrition__content
+
+   &__content {
+   }
+}
+
+.days-nutrition {
+   display: flex;
+   gap: rem(20);
+   @media (max-width:$tablet){
+      flex-direction: column;
+   }
+
+   // .days-nutrition__description
+
+   &__description {
+      flex: 0 0 percent(380, 1180);
+      @media (max-width:$tablet){
+         @include adaptiveValue("margin-bottom", 40, 20);
+      }
+   }
+
+   // .days-nutrition__about
+
+   &__about {
+      background: #64d370;
+      box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
+      border-radius: 30px;
+      padding: rem(30) rem(50);
+      margin: rem(0) rem(0) rem(30) rem(0);
+   }
+
+   // .days-nutrition__label
+
+   &__label {
+      display: flex;
+      justify-content: space-between;
+      margin: rem(0) rem(0) rem(19) rem(0);
+   }
+
+   // .days-nutrition__title
+
+   &__title {
+      font-family: Comfortaa;
+      font-weight: bold;
+      font-size: 25px;
+      @include adaptiveValue("font-size", 25, 14);
+      line-height: math.div(28, 25);
+      text-transform: uppercase;
+      color: #f5faff;
+   }
+
+   // .days-nutrition__number
+
+   &__number {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: math.div(22, 18);
+      color: #f5faff;
+   }
+
+   // .days-nutrition__text
+
+   &__text {
+      font-weight: 500;
+      font-size: 16px;
+      @include adaptiveValue("font-size", 16, 10);
+      line-height: math.div(20, 16);
+      color: #f5faff;
+   }
+
+   // .days-nutrition__course
+
+   &__course {
+   }
+
+   // .days-nutrition__button
+
+   &__button {
+      text-align: center;
+   }
+
+   // .days-nutrition__timetable
+
+   &__timetable {
+      flex: 1 1 auto;
+   }
+}
+.course-nutrition {
+   padding: rem(20) rem(20);
+   display: flex;
+   font-size: 15px;
+   @include adaptiveValue("font-size", 15, 10);
+   line-height: math.div(18, 15);
+   color: #000000;
+   &:not(:last-child) {
+      margin-bottom: rem(20);
+   }
+}
+.course-nutrition-day {
+   // .course-nutrition-day__list
+
+   &__list {
+      flex: 1 1 auto;
+      width: 100%;
+   }
+
+   // .course-nutrition-day__item
+
+   &__item {
+      &:not(:last-child) {
+         margin-bottom: rem(15);
+      }
+   }
+}
+.course-nutrition-old-price {
+   flex: 0 0 rem(90);
+   padding: rem(0) rem(10);
+   // .course-nutrition-old-price__item
+
+   &__item {
+      &:not(:last-child) {
+         margin-bottom: rem(15);
+      }
+   }
+}
+.course-nutrition-price {
+   flex: 0 0 rem(90);
+   padding: rem(0) rem(10);
+   // .course-nutrition-price__item
+
+   &__item {
+      &:not(:last-child) {
+         margin-bottom: rem(15);
+      }
+   }
+}
+
+.options-timetable-nutrition {
+   display: flex;
+   width: 100%;
+   background: #f5faff;
+   box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
+   border-radius: 30px;
+   justify-content: space-evenly;
+   // padding: rem(0) rem(50);
+   margin: rem(0) rem(0) rem(20) rem(0);
+   // .options-timetable-nutrition__item
+
+   &__item {
+      padding: rem(16) rem(10);
+   }
+
+   // .options-timetable-nutrition__input
+
+   &__input {
+   }
+
+   // .options-timetable-nutrition__text
+
+   &__text {
+      font-family: Comfortaa;
+      font-weight: bold;
+      font-size: 25px;
+      line-height: math.div(28, 25);
+      text-transform: uppercase;
+      color: #000000;
+      @include adaptiveValue("font-size", 25, 14);
+   }
+}
+
+.meal-nutrition {
+   background: #f5faff;
+   box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
+   border-radius: 30px;
+   padding: rem(30) rem(40);
+   display: flex;
+   @media (max-width:$mobile){
+      padding: 20px;
+   }
+   // .meal-nutrition__list
+
+   &__list {
+   }
+}
+.list-meal-nutrition {
+   width: 100%;
+   // .list-meal-nutrition__item
+
+   &__item {
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 50, 25);
+      }
+      display: flex;
+   }
+
+   // .list-meal-nutrition__time
+
+   &__time {
+      flex: 0 0 rem(150);
+      @include adaptiveValue("flex-basis", 150, 80);
+   }
+
+   // .list-meal-nutrition__title
+
+   &__title {
+      font-size: 20px;
+      line-height: math.div(24, 20);
+      color: #000000;
+      @include adaptiveValue("font-size", 20, 14);
+      &:not(:last-child) {
+         margin-bottom: rem(5);
+      }
+   }
+
+   // .list-meal-nutrition__period
+
+   &__period {
+      font-weight: 300;
+      font-size: 18px;
+      @include adaptiveValue("font-size", 18, 12);
+      line-height: math.div(22, 18);
+      color: #000000;
+   }
+
+   // .list-meal-nutrition__food
+
+   &__food {
+      flex: 1 1 auto;
+      font-weight: 300;
+      font-size: 18px;
+      @include adaptiveValue("font-size", 18, 12);
+      line-height: math.div(22, 18);
+      color: #000000;
+   }
+
+   // .list-meal-nutrition__weight
+
+   &__weight {
+      font-weight: 300;
+      font-size: 18px;
+      @include adaptiveValue("font-size", 18, 12);
+      line-height: math.div(22, 18);
+      color: #000000;
+      padding: rem(0) rem(0) rem(0) rem(15);
+   }
+}
