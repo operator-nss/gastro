@@ -193,7 +193,35 @@ body {
    // .page__order
 
    &__order {
+      position: relative;
       @include adaptiveValue("padding-top", 50, 25);
-      @include adaptiveValue("padding-bottom", 50, 25);
+      @include adaptiveValue("padding-bottom", 156, 50);
+      &::after {
+         content: "";
+         width: 603px;
+         height: 603px;
+         position: absolute;
+         background: rgba(38, 240, 58, 0.1);
+         top: -200px;
+         right: -200px;
+         border-radius: 50%;
+         z-index: -1;
+         @media (max-width: $tablet) {
+            display: none;
+         }
+      }
+      &::before {
+         content: "";
+         width: 520px;
+         height: 520px;
+         position: absolute;
+         left: -300px;
+         border-radius: 50%;
+         top: 20%;
+         border: 30px solid rgba(38, 240, 58, 0.1);
+         @media (max-width: $tablet) {
+            display: none;
+         }
+      }
    }
 }

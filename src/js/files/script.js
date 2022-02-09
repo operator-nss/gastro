@@ -23,3 +23,10 @@ window.addEventListener('load', () => {
    }, 6000);
 });
 
+
+// forms
+const inputNames = document.querySelectorAll('.issue-order__item');
+
+document.addEventListener("formSent", function (e) {
+   inputNames.forEach(el => el.classList.add('_form-send'))
+});

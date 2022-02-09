@@ -273,29 +273,32 @@
                   <div class="issue-order__title-subtext">Обсудите все детали заказа по телефону
                      или сами укажите все подробности онлайн</div>
 
-                  <form action="#" class="issue-order__form">
+
+
+                  <form data-dev action="#" class="issue-order__form form">
 
                      <div class="issue-order__item">
-                        <input id="form-name" autocomplete="off" type="text" name="form[]" data-error="Ошибка"
-                           placeholder="Иван" class="input issue-order__input-name">
+                        <input data-validate data-required id="form-name" autocomplete="off" type="text" name="form[]"
+                           data-error="1" placeholder="Иван" class="input issue-order__input-name">
                         <label class="issue-order__label-name" for="form-name"><span>Имя</span></label>
                      </div>
 
                      <div class="issue-order__item">
-                        <input id="form-phone" autocomplete="off" type="text" name="form[]" data-error="Ошибка"
-                           placeholder="+123456789" class="input issue-order__input-phone">
+                        <input data-validate data-required id="form-phone" autocomplete="off" type="text" name="form[]"
+                           data-error="1" placeholder="+123456789" class="input issue-order__input-phone">
                         <label class="issue-order__label-phone" for="form-phone"><span>Номер телефона</span></label>
                      </div>
 
 
                      <div class="issue-order-checkbox__checkbox checkbox">
-                        <input id="c_1" data-error="Ошибка" class="checkbox__input issue-order-checkbox__input"
+                        <input id="c_1" data-error="Ошибка" class="checkbox__input issue-order-checkbox__input-name"
                            type="checkbox" value="1" name="form[]">
                         <label for="c_1" class="issue-order-checkbox__label checkbox__label"><span
                               class="checkbox__text issue-order-checkbox__text">Тест-день! Получить скидку
                               -30%?</span></label>
-                        <input id="c_2" data-error="Ошибка" class="checkbox__input issue-order-checkbox__input"
-                           type="checkbox" value="2" name="form[]">
+                        <input data-required id="c_2" data-error="Вы должны согласиться с условиями сотрудничества"
+                           class="checkbox__input issue-order-checkbox__input-phone" type="checkbox" value="2"
+                           name="form[]">
                         <label for="c_2" class="issue-order-checkbox__label checkbox__label"><span
                               class="checkbox__text issue-order-checkbox__text">Согласен с
                               <a href="">условиями сотрудничества</a>
@@ -313,17 +316,51 @@
 
                </div>
 
-               <div class="order__questions"></div>
+               <div class="order__questions questions-order">
+                  <div class="questions-order__title">Часто задаваемые вопросы</div>
+
+                  <div class="questions-order__items">
+                     <a href="" class="questions-order__item">
+                        Как осуществляется доставка правильного питания?
+                     </a>
+                     <a href="" class="questions-order__item">
+                        Можно ли менять время доставки\место?
+                     </a>
+                     <a href="" class="questions-order__item">
+                        Как и в чем приезжает еда?
+                     </a>
+                     <a href="" class="questions-order__item">
+                        Когда Вы готовите?
+                     </a>
+                     <a href="" class="questions-order__item">
+                        Какие продукты Вы используете?
+                     </a>
+                     <a href="" class="questions-order__item">
+                        Я буду есть одно и то же?
+                     </a>
+                     <a href="" class="questions-order__item">
+                        У меня аллергия и непереносимость определенных продуктов
+                     </a>
+                     <a href="" class="questions-order__item">
+                        В какой очередности все есть?
+                     </a>
+                     <a href="" class="questions-order__item">
+                        Можно ли замораживать программу?
+                     </a>
+                  </div>
+
+
+               </div>
             </div>
          </section>
 
 
-         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
       </main>
 
       @@include('html/_footer.htm',{})
+      <br><br><br><br><br><br><br>
    </div>
    @@include('html/_popup.htm',{})
    @@include('html/_js.htm',{})

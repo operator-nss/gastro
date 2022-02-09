@@ -1,3 +1,226 @@
 //====================================================================================================
+.footer {
+   background: #f5faff;
+   box-shadow: 0px 0px 30px rgba(86, 86, 86, 0.25);
+   // .footer__container
+
+   &__container {
+      display: flex;
+      @include adaptiveValue("padding-top", 41, 30);
+      @include adaptiveValue("padding-bottom", 41, 30);
+   }
+
+   // .footer__links
+
+   &__links {
+      flex: 0 1 33.333%;
+      @media (max-width:$mobile){
+          display: none;
+      }
+   }
+
+   // .footer__logo
+
+   &__logo {
+      flex: 1 1 auto;
+   }
+
+   // .footer__social
+
+   &__social {
+      flex: 0 1 33.333%;
+      text-align: right;
+   }
+}
+.links-footer {
+   // .links-footer__list
+
+   &__list {
+   }
+
+   // .links-footer__item
+
+   &__item {
+      &:not(:last-child) {
+         margin-bottom: rem(17);
+      }
+   }
+
+   // .links-footer__link
+
+   &__link {
+      font-family: Comfortaa;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: math.div(22, 20);
+      transition: color 0.3s ease 0s;
+      @include adaptiveValue("font-size", 20, 14);
+
+      @media (any-hover: hover) {
+         &:hover {
+            color: #64d370;
+         }
+      }
+      &:active {
+         color: #3d9646;
+      }
+   }
+}
+.logo-footer {
+   text-align: center;
+   @media (max-width:$mobile){
+       text-align: center;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+   // .logo-footer__logo
+
+   &__logo {
+      width: 422px;
+      display: block;
+      height: 174px;
+      @include adaptiveValue("height", 174, 126);
+      @include adaptiveValue("width", 422, 300);
+      transition: transform 0.3s ease 0s;
+
+      img {
+         width: 100%;
+         height: 100%;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            transform: scale(1.1);
+         }
+      }
+   }
+
+   // .logo-footer__title
+
+   &__title {
+      font-family: Comfortaa;
+      font-size: 20px;
+      @include adaptiveValue("font-size", 20, 14);
+      line-height: 115.8%;
+      @media (max-width:$mobile){
+          &:not(:last-child) {margin-bottom: rem(14);}
+      }
+   }
+}
+.social-footer {
+   display: flex;
+   flex-direction: column;
+   align-items: end;
+   @media (max-width:$mobile){
+       align-items: center;
+   }
+   // .social-footer__conditions
+
+   &__conditions {
+      font-family: Comfortaa;
+      justify-content: end;
+      align-items: end;
+      transition: color 0.3s ease 0s;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: math.div(22, 20);
+      display: flex;
+      @include adaptiveValue("font-size", 20, 14);
+      justify-content: end;
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: #64d370;
+         }
+      }
+      &:active {
+         color: #3d9646;
+      }
+      @media (max-width:$mobile){
+         display: none;
+     }
+   }
+
+   // .social-footer__faq
+
+   &__faq {
+      font-family: Comfortaa;
+      display: block;
+      transition: color 0.3s ease 0s;
+      font-weight: bold;
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+      }
+      font-size: 20px;
+      @include adaptiveValue("font-size", 20, 14);
+      line-height: math.div(22, 20);
+      @media (any-hover: hover) {
+         &:hover {
+            color: #64d370;
+         }
+      }
+      &:active {
+         color: #3d9646;
+      }
+      @media (max-width:$mobile){
+         display: none;
+     }
+   }
+
+   // .social-footer__links
+
+   &__links {
+      display: flex;
+      justify-content: end;
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+      }
+   }
+
+   // .social-footer__item
+
+   &__item {
+      background-color: #020202;
+      border-radius: 50%;
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease 0s;
+      height: 30px;
+
+      &:not(:last-child) {
+         margin-right: rem(15);
+      }
+      &::before {
+         color: #f5faff;
+         font-size: rem(18);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: #64d370;
+         }
+      }
+   }
+
+   // .social-footer__phone
+
+   &__phone {
+      display: block;
+      font-weight: bold;
+      font-size: 20px;
+      @include adaptiveValue("font-size", 20, 14);
+      line-height: math.div(24, 20);
+      color: #64d370;
+      white-space: nowrap;
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+}
 
 //====================================================================================================
