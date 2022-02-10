@@ -50,16 +50,7 @@ $responsiveType: 1;
 @import "base/null";
 
 body {
-   &::after {
-      content: "";
-      height: 100%;
-      background-color: red;
-      position: absolute;
-      left: 50%;
-      top: 0;
-      opacity: 0.3;
-      width: 1px;
-   }
+
 
    background-color: #f5faff;
    // Скролл заблокирован

@@ -34,6 +34,15 @@
    // .button__border
 
    &__border {
+      background: #f5faff;
+      padding: rem(11) rem(45);
+      color: #64d370;
+      @media (any-hover: hover) {
+         &:hover {
+            background: #64d370;
+            color: #f5faff;
+         }
+      }
    }
 }
 

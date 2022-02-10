@@ -30,3 +30,17 @@ const inputNames = document.querySelectorAll('.issue-order__item');
 document.addEventListener("formSent", function (e) {
    inputNames.forEach(el => el.classList.add('_form-send'))
 });
+
+
+// social dnone
+document.addEventListener("watcherCallback", function (e) {
+	// Полная информация от наблюдателя
+	const entry = e.detail.entry;
+	// Наблюдаемый объект
+	const targetElement = entry.target;
+
+   // if(e) {
+   //    socialMainslider.classList.add('_dnone');
+   // }
+
+});
